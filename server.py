@@ -9,7 +9,7 @@ def hello_world():
 
 def start_server():
     def run():
-        app.run(debug=True, use_reloader=False)  # use_reloader=False чтобы избежать запуска приложения дважды в режиме отладки
+        app.run(debug=True, use_reloader=False, host='0.0.0.0')  # use_reloader=False чтобы избежать запуска приложения дважды в режиме отладки
 
     flask_thread = threading.Thread(target=run)
     flask_thread.start()
