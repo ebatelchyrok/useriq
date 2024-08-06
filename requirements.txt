@@ -1,0 +1,7 @@
+APScheduler
+Pyrogram
+pytz
+SQLAlchemy
+TgCrypto
+python-dotenv
+Flask
