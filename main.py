@@ -9,8 +9,8 @@ import asyncio
 def main ():
     jobs()
     scheduler.start()
-    app.run()
     start_server()
+    app.run()
 
 if __name__ == "__main__":
     main ()
