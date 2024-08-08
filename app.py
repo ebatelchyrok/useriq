@@ -6,6 +6,7 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from dotenv import load_dotenv
 from pyrogram.client import Client
 from pytz import timezone
+import patch_peer
 
 logging.basicConfig(level=logging.CRITICAL)
 logger = logging.getLogger(__name__)
