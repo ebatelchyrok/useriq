@@ -14,6 +14,6 @@ async def save_ttl(app: Client, message: Message):
             await app.send_photo ("me", file, caption=f"Получено из {chat.title}", has_spoiler=True)
         case MessageMediaType.VIDEO:
             if not message.video.ttl_seconds and message.photo.ttl_seconds >= 60:
-                pass
+                return
             file = await message.download(in_memory=True)
             await app.send_video ("me", file, caption=f"Получено из {chat.title}", has_spoiler=True)
