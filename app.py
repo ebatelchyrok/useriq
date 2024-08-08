@@ -1,18 +1,18 @@
-from pytz import timezone
-import os
-from dotenv import load_dotenv
 import logging
-from apscheduler.schedulers.asyncio import AsyncIOScheduler
-from apscheduler.jobstores.sqlalchemy import SQLAlchemyJobStore
+import os
 
-from pyrogram import Client
+from apscheduler.jobstores.sqlalchemy import SQLAlchemyJobStore
+from apscheduler.schedulers.asyncio import AsyncIOScheduler
+from dotenv import load_dotenv
+from pyrogram.client import Client
+from pytz import timezone
 
 logging.basicConfig(level=logging.CRITICAL)
 logger = logging.getLogger(__name__)
 
 load_dotenv()
 
-session = os.getenv("SESSION")
+session = str (os.getenv("SESSION"))
 plugins = dict(root="plugins")
 
 tz = timezone("Europe/Kiev")

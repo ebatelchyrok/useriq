@@ -1,6 +1,8 @@
 from app import app
-from schedule import scheduler, jobs
+from schedule import jobs, scheduler
 from server import start_server
+
+
 def main ():
     jobs()
     scheduler.start()
@@ -9,4 +11,3 @@ def main ():
 
 if __name__ == "__main__":
     main ()
-    
