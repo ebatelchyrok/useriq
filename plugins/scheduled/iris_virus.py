@@ -8,5 +8,5 @@ async def infect():
     for _ in range(72):
         schudled_time += timedelta(minutes=20)
         await app.send_message(chat_id=int (-1002175276391), text="Заразить +", schedule_date=schudled_time)
-        await sleep(7)
+        await sleep(3)
         
